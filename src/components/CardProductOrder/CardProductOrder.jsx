@@ -1,54 +1,44 @@
 import { useDispatch } from 'react-redux';
-// import { addToCart } from 'redux/cartSlice';
+
 import {
   incrementQuantity,
   decrementQuantity,
   removeItem,
 } from 'redux/cartSlice';
-
 import {
   CardContainer,
-  CardDiv,
   CardTitle,
   NumberInput,
   Image,
   ButtonCard,
   TextCard,
-  ButtonDecrement,
-  ButtonIncrement,
+  DecrementButton,
+  IncrementButton,
   QuantityDiv,
 } from './CardProductOrder.styled';
 
 export const CardProductOrder = ({ id, image, title, price, quantity }) => {
   const dispatch = useDispatch();
 
-  const changeInput = event => {
-    console.log(event.target.value);
-  };
-
   return (
     <CardContainer>
       <Image src={image} alt="Burger" />
-
-      <CardDiv>
-        <CardTitle>{title}</CardTitle>
-        <TextCard>{price}грн.</TextCard>
-      </CardDiv>
+      <CardTitle>{title}</CardTitle>
+      <TextCard>{price}₴</TextCard>
       <QuantityDiv>
-        <ButtonDecrement onClick={() => dispatch(decrementQuantity(id))}>
+        <DecrementButton onClick={() => dispatch(decrementQuantity(id))}>
           -
-        </ButtonDecrement>
+        </DecrementButton>
         <NumberInput
           name="quantity"
           type="number"
           min={1}
           value={quantity}
-          onChange={changeInput}
           disabled
         />
-        <ButtonIncrement onClick={() => dispatch(incrementQuantity(id))}>
+        <IncrementButton onClick={() => dispatch(incrementQuantity(id))}>
           +
-        </ButtonIncrement>
+        </IncrementButton>
       </QuantityDiv>
       <ButtonCard onClick={() => dispatch(removeItem(id))}>Delete</ButtonCard>
     </CardContainer>

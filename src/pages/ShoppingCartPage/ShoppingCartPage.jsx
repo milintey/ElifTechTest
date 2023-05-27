@@ -1,12 +1,12 @@
-import { FormDiv, OrderDiv } from './ShoppingCartPage.styled';
+import { useSelector } from 'react-redux';
+
+import { FormDiv, OrderDiv, OrderList } from './ShoppingCartPage.styled';
 import { OrderForm } from 'components/OrderForm/OrderForm';
 import { Div } from 'pages/ShopPage/ShopPage.styled';
-import { CardProductOrder } from 'components/Order/CardProductOrder';
-import { useSelector } from 'react-redux';
+import { CardProductOrder } from 'components/CardProductOrder/CardProductOrder';
 
 export const ShoppingCartPage = () => {
   const cart = useSelector(state => state.cart);
-  console.log(cart);
 
   return (
     <Div>
@@ -14,8 +14,8 @@ export const ShoppingCartPage = () => {
         <OrderForm />
       </FormDiv>
       <OrderDiv>
-        <ul>
-          {cart ? (
+        <OrderList>
+          {cart.cart[0] ? (
             cart.cart.map(({ id, image, title, price, quantity }) => {
               return (
                 <li key={id}>
@@ -30,9 +30,9 @@ export const ShoppingCartPage = () => {
               );
             })
           ) : (
-            <li></li>
+            <p>Сart is empty</p>
           )}
-        </ul>
+        </OrderList>
       </OrderDiv>
     </Div>
   );

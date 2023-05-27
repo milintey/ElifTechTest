@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-export const ShopContainer = styled.div`
+export const ShopMenuContainer = styled.div`
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   width: 270px;
   height: 600px;
@@ -11,10 +10,7 @@ export const ShopContainer = styled.div`
   border-radius: 20px;
 `;
 
-export const ShopMenuContainer = styled.div`
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+export const ShopContainer = styled.div`
   width: 900px;
   padding-bottom: 50px;
   background: #ffffff;
@@ -30,20 +26,7 @@ export const Div = styled.div`
 export const CompanyNameList = styled.ul`
   padding: 0;
   margin: 0;
-  /* align-items: center;
-  justify-content: center; */
+
   list-style: none;
   margin-top: 30px;
-`;
-
-export const CompanyNameItem = styled.li`
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 40px;
-  background-color: black;
-  margin-bottom: 20px; */
-
-  /* list-style-type: none; */
 `;

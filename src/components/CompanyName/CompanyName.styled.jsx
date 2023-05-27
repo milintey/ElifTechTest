@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const LinkToMenu = styled(NavLink)`
-  /* padding: 8px 16px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +11,7 @@ export const LinkToMenu = styled(NavLink)`
   border-radius: 4px;
   text-decoration: none;
   color: orangered;
-  border: 1px solid orangered;
+  border: 2px solid orangered;
   font-size: 20px;
   font-weight: 500;
 

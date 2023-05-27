@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react';
 
 import { CardProduct } from 'components/CardProduct/CardProduct';
-import { Ul, PageTitle } from './KfcPage.styled';
+import { Ul, PageTitle } from 'pages/KfcPage/KfcPage.styled';
 import { fetchProduct } from 'components/operations';
 
-export const KfcPage = () => {
+export const BurgerPage = () => {
   const [state, setState] = useState();
 
   useEffect(() => {
     fetchProduct()
       .then(response => {
-        const responseFilter = response.filter(item => item.delivery === 'kfc');
+        const responseFilter = response.filter(
+          item => item.delivery === 'burger'
+        );
         return setState(responseFilter);
       })
       .catch(error => console.log(error));
@@ -18,7 +20,7 @@ export const KfcPage = () => {
 
   return (
     <div>
-      <PageTitle>KFC</PageTitle>
+      <PageTitle>The Burger</PageTitle>
       {state && (
         <Ul>
           {state.map(({ id, image, title, price }) => {

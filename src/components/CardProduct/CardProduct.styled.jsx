@@ -19,23 +19,20 @@ export const CardDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 30px;
-  width: 160px;
+  width: 140px;
 `;
 
 export const Image = styled.img`
   margin-bottom: 25px;
-  /* margin-top: 20px; */
   margin-left: auto;
   margin-right: auto;
-  /* background-color: #f1f1f1; */
-  border: 1px solid black;
   border-radius: 10px;
   width: 120px;
   height: 140px;
 `;
 
 export const CardTitle = styled.h2`
-  font-size: 22px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   margin: 0px 0px 20px 0px;
@@ -43,7 +40,6 @@ export const CardTitle = styled.h2`
 
 export const ImageDiv = styled.div`
   margin-bottom: 25px;
-  /* margin-top: 20px; */
   margin-left: auto;
   margin-right: auto;
   background-color: #f1f1f1;
