@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ElifTechTest/static/css/main.7acaea2f.css",
-    "main.js": "/ElifTechTest/static/js/main.5e4dc9bc.js",
+    "main.js": "/ElifTechTest/static/js/main.7cf381c9.js",
     "index.html": "/ElifTechTest/index.html",
     "main.7acaea2f.css.map": "/ElifTechTest/static/css/main.7acaea2f.css.map",
-    "main.5e4dc9bc.js.map": "/ElifTechTest/static/js/main.5e4dc9bc.js.map"
+    "main.7cf381c9.js.map": "/ElifTechTest/static/js/main.7cf381c9.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.5e4dc9bc.js"
+    "static/js/main.7cf381c9.js"
   ]
 }
