@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 
 import { CardProduct } from 'components/CardProduct/CardProduct';
-import { Ul, PageTitle } from 'pages/KfcPage/KfcPage.styled';
+import { Ul, PageTitle } from 'components/pages/KfcPage/KfcPage.styled';
 import { fetchProduct } from 'components/operations';
 
-export const NinjaSushiPage = () => {
+export const McDonaldsPage = () => {
   const [state, setState] = useState();
 
   useEffect(() => {
     fetchProduct()
       .then(response => {
         const responseFilter = response.filter(
-          item => item.delivery === 'ninja'
+          item => item.delivery === 'mac-donalds'
         );
         return setState(responseFilter);
       })
@@ -20,7 +20,7 @@ export const NinjaSushiPage = () => {
 
   return (
     <div>
-      <PageTitle>Ninja Sushi</PageTitle>
+      <PageTitle>McDonald’s</PageTitle>
       {state && (
         <Ul>
           {state.map(({ id, image, title, price }) => {

@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import { FormDiv, OrderDiv, OrderList } from './ShoppingCartPage.styled';
 import { OrderForm } from 'components/OrderForm/OrderForm';
-import { Div } from 'pages/ShopPage/ShopPage.styled';
+import { Div } from 'components/pages/ShopPage/ShopPage.styled';
 import { CardProductOrder } from 'components/CardProductOrder/CardProductOrder';
 
 export const ShoppingCartPage = () => {

@@ -68,22 +68,22 @@ export const OrderForm = () => {
       <Forma autoComplete="off">
         <LabelForm>
           Name
-          <InputForm type="text" name="name" required />
+          <InputForm type="text" name="name" />
           <ErrorMessage name="name" component={ValidationDiv} />
         </LabelForm>
         <LabelForm>
           Email
-          <InputForm type="email" name="email" required />
+          <InputForm type="email" name="email" />
           <ErrorMessage name="email" component={ValidationDiv} />
         </LabelForm>
         <LabelForm>
           Phone
-          <InputForm type="tel" name="phone" required />
+          <InputForm type="tel" name="phone" />
           <ErrorMessage name="phone" component={ValidationDiv} />
         </LabelForm>
         <LabelForm>
           Address
-          <InputForm type="text" name="address" required />
+          <InputForm type="text" name="address" />
           <ErrorMessage name="address" component={ValidationDiv} />
         </LabelForm>
         <p>Total Price: {totalPrice}</p>

@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { ShopPage } from 'pages/ShopPage/ShopPage';
-import { NinjaSushiPage } from 'pages/NinjaSushiPage/NinjaSushiPage';
-import { BurgerPage } from 'pages/BurgerPage/BurgerPage';
-import { KfcPage } from 'pages/KfcPage/KfcPage';
-import { McDonaldsPage } from 'pages/McDonald’sPage/McDonald’sPage';
-import { ShoppingCartPage } from 'pages/ShoppingCartPage/ShoppingCartPage';
-import { MamamiaPage } from 'pages/MamamiaPage/MamamiaPage';
+import { ShopPage } from 'components/pages/ShopPage/ShopPage';
+import { NinjaSushiPage } from 'components/pages/NinjaSushiPage/NinjaSushiPage';
+import { BurgerPage } from 'components/pages/BurgerPage/BurgerPage';
+import { KfcPage } from 'components/pages/KfcPage/KfcPage';
+import { McDonaldsPage } from 'components/pages/McDonald’sPage/McDonald’sPage';
+import { ShoppingCartPage } from 'components/pages/ShoppingCartPage/ShoppingCartPage';
+import { MamamiaPage } from 'components/pages/MamamiaPage/MamamiaPage';
 import { Link, Container, Header } from './App.styled';
 
 export const App = () => {

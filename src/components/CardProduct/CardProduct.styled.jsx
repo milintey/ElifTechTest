@@ -23,6 +23,7 @@ export const CardDiv = styled.div`
 `;
 
 export const Image = styled.img`
+  object-fit: cover;
   margin-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
