@@ -43,16 +43,9 @@ export const OrderForm = () => {
   const submitForm = (value, { resetForm }) => {
     const order = { ...value, order: [...zakaz.cart] };
     axios
-      .post(
-        'https://6471e31b6a9370d5a41ac92f.mockapi.io/delivery/v1/orders',
-        order
-      )
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      .post('https://backend-eliftech.onrender.com/api/orders', order)
+      .then(response => console.log(response))
+      .catch(error => console.log(error));
 
     localStorage.setItem('cart', JSON.stringify(zakaz.cart));
     resetForm();

@@ -3,29 +3,34 @@ import { useEffect, useState } from 'react';
 import { CardProduct } from 'components/CardProduct/CardProduct';
 import { Ul, PageTitle } from './KfcPage.styled';
 import { fetchProduct } from 'components/operations';
+import { Loader } from 'components/Loader/Loader';
 
 export const KfcPage = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [state, setState] = useState();
 
   useEffect(() => {
-    fetchProduct()
+    setIsLoading(true);
+
+    fetchProduct('kfc')
       .then(response => {
-        const responseFilter = response.filter(item => item.delivery === 'kfc');
-        return setState(responseFilter);
+        return setState(response);
       })
-      .catch(error => console.log(error));
+      .catch(error => console.log(error))
+      .finally(() => setIsLoading(false));
   }, []);
 
   return (
     <div>
       <PageTitle>KFC</PageTitle>
+      {isLoading && <Loader />}
       {state && (
         <Ul>
-          {state.map(({ id, image, title, price }) => {
+          {state.map(({ _id, image, title, price }) => {
             return (
-              <li key={id}>
+              <li key={_id}>
                 <CardProduct
-                  id={id}
+                  id={_id}
                   image={image}
                   title={title}
                   price={price}

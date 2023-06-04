@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-export const fetchProduct = async () => {
+export const fetchProduct = async delivery => {
   const response = await axios.get(
-    'https://6471e31b6a9370d5a41ac92f.mockapi.io/delivery/v1/product-kfc'
+    'https://backend-eliftech.onrender.com/api/products'
   );
-  return response.data;
+  const products = response.data.filter(item => item.delivery === delivery);
+  return products;
 };
